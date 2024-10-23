@@ -6,11 +6,7 @@ import ethebee3.ServerPlugin.ServerPlugin;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class onAsyncPlayerChatEvent implements Listener {
-    private ServerPlugin plugin;
-
-    public onAsyncPlayerChatEvent(ServerPlugin serverPlugin) {
-        this.plugin = plugin;
-    }
+    public onAsyncPlayerChatEvent(ServerPlugin serverPlugin) {} //random constructor, dont question it
 
     @EventHandler
     public void onAsyncPlayerChatEvent(AsyncPlayerChatEvent event) {
