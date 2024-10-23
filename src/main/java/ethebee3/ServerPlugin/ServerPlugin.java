@@ -1,15 +1,20 @@
 package ethebee3.ServerPlugin;
 
 import ethebee3.ServerPlugin.commands.DupeCMD;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import ethebee3.ServerPlugin.events.*;
+import java.io.File;
 
 public final class ServerPlugin extends JavaPlugin {
+    public static YamlConfiguration words = null;
+
 
     @Override
     public void onEnable() {
         registerListeners();
         registerCommands();
+        initYml();
     }
 
     @Override
@@ -25,5 +30,13 @@ public final class ServerPlugin extends JavaPlugin {
     public void registerCommands() {
         this.getCommand("dupe").setExecutor(new DupeCMD());
     }
+
+    public void initYml() {
+        if (new File(getDataFolder() + "/words.yml").exists()) {
+                words = new YamlConfiguration();
+        }
+    }
+
+
 
 }

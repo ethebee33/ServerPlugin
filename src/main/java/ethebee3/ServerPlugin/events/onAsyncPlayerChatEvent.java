@@ -4,9 +4,13 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import ethebee3.ServerPlugin.ServerPlugin;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import java.io.File;
 
 public class onAsyncPlayerChatEvent implements Listener {
     public onAsyncPlayerChatEvent(ServerPlugin serverPlugin) {} //random constructor, dont question it
+
+
+
 
     @EventHandler
     public void onAsyncPlayerChatEvent(AsyncPlayerChatEvent event) {
@@ -18,9 +22,9 @@ public class onAsyncPlayerChatEvent implements Listener {
     }
 
     public boolean checkSwear(String message) {
-        //very simple
-        if (message.contains("nigger")) return true;
+        if (ServerPlugin.words != null) {
 
+        }
         return false;
     }
 }
