@@ -4,7 +4,9 @@ import ethebee3.ServerPlugin.commands.DupeCMD;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import ethebee3.ServerPlugin.events.*;
+
 import java.io.File;
+import java.util.List;
 
 public final class ServerPlugin extends JavaPlugin {
     public static YamlConfiguration words = null;
@@ -33,7 +35,8 @@ public final class ServerPlugin extends JavaPlugin {
 
     public void initYml() {
         if (new File(getDataFolder() + "/words.yml").exists()) {
-                words = new YamlConfiguration();
+            words = new YamlConfiguration();
+
         }
     }
 
