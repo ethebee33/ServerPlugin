@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group = 'dupesystem'
-version = '1.0-SNAPSHOT'
+group = project.name
+version = project.pluginVersion
 
 repositories {
     mavenCentral()
@@ -19,6 +19,7 @@ repositories {
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT")
+    implementation('org.javacord:javacord:3.8.0')
 }
 
 def targetJavaVersion = 17
