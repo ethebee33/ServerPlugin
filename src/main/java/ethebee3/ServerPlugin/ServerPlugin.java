@@ -24,7 +24,7 @@ public final class ServerPlugin extends JavaPlugin {
         initYml();
 
         new DiscordApiBuilder()
-                .setToken("MTMwMDE5MTk3MzAyOTcwNzc5Nw.GyjCnE.-70I_qYgWqLV_5l7V-oZN4LoLaDIqcZmlCUGYM")
+                .setToken("MTMwMDE5MTk3MzAyOTcwNzc5Nw.GyjCnE.-70I_qYgWqLV_5l7V-oZN4LoLaDIqcZmlCUGYM")//bot token here
                 .login()
                 .thenAccept(this::onConnectToDiscord)
                 .exceptionally(error -> {
